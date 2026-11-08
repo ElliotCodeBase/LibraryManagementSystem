@@ -30,6 +30,7 @@ table = Table(
     border_style="bright_blue",
 
 )
+
 table.add_column("Name")
 table.add_column("Name")
 table.add_column("Name")

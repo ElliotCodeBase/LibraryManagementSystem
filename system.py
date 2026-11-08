@@ -4,6 +4,8 @@ from rich import box
 from rich import print
 
 CreationState = False
+UserlogState = False
+
 console = Console()
 
 
@@ -12,6 +14,9 @@ def AcountCreation(CreationState):
     while CreationState:
         pass
 
+def LoginSignUp(UserLogState):
+    while UserLogState:
+        pass
 
 def logo():
     Logo = r"""

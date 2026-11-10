@@ -3,20 +3,14 @@ from rich.console import Console
 from rich import box
 from rich import print
 
+import os
+import sys
+
+
 CreationState = False
 UserlogState = False
 
 console = Console()
-
-
-
-def AcountCreation(CreationState):
-    while CreationState:
-        pass
-
-def LoginSignUp(UserLogState):
-    while UserLogState:
-        pass
 
 def logo():
     Logo = r"""
@@ -26,7 +20,27 @@ def logo():
     ██   ██ ██ ██   ██ ██    ██ ██    ██ ██  ██
     ██████  ██ ██████   ██████   ██████  ██   ██[/bold purple]
     """
-    print(" "*10, Logo)
+    print(Logo)
+
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+def AcountCreation(CreationState):
+    while CreationState:
+        pass
+
+def LoginSignUp(UserLogState):
+
+    while UserLogState:
+        logo()
+        UserInput = input("Log in[1]\nSign out[2]\n")
+        if UserInput == "1":
+            return False
+            pass
+
+LoginSignUp(True)
+
+
 logo()
 
 table = Table(
